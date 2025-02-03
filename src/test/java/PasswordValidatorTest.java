@@ -5,10 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class PasswordValidatorTest {
 
     @Test
-    void testLengthValid() {
-
-        // Testfall 1: Passwort mit weniger als 8 Zeichen
+    void testPasswordWithLessThan8Characters() {
         String shortPassword = "abc123";
         assertFalse(PasswordValidator.LengthValid(shortPassword));
+    }
+
+    @Test
+    void testPasswordContainsDigits() {
+        String validPassword = "var12345";
+        assertTrue(PasswordValidator.hasDigits(validPassword));
     }
 }
