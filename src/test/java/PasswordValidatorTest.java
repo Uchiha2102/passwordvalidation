@@ -15,4 +15,10 @@ class PasswordValidatorTest {
         String validPassword = "var12345";
         assertTrue(PasswordValidator.hasDigits(validPassword));
     }
+    @Test
+    void testPasswordWithUpperAndLowerCase(){
+    String UpperLowerCase = "ABCabc";
+    assertTrue(PasswordValidator.containsBothCases(UpperLowerCase));
+    }
+
 }
